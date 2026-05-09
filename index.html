@@ -10,20 +10,82 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans">
+<!-- Responsive Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold text-pink-600">
+      FashionHub
+    </h1>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-pink-600">FashionHub</h1>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+      <li>
+        <a href="men.html" class="hover:text-pink-600 transition">
+          Men
+        </a>
+      </li>
 
-      <ul class="flex space-x-8 text-gray-700 font-semibold">
-        <li><a href="#men" class="hover:text-pink-600 transition">Men</a></li>
-        <li><a href="#women" class="hover:text-pink-600 transition">Women</a></li>
-        <li><a href="#children" class="hover:text-pink-600 transition">Children</a></li>
-      </ul>
-    </div>
-  </nav>
+      <li>
+        <a href="women.html" class="hover:text-pink-600 transition">
+          Women
+        </a>
+      </li>
 
+      <li>
+        <a href="children.html" class="hover:text-pink-600 transition">
+          Children
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-3xl text-pink-600">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    
+    <ul class="flex flex-col text-center text-gray-700 font-semibold py-4 space-y-4">
+      
+      <li>
+        <a href="men.html" class="block hover:text-pink-600 transition">
+          Men
+        </a>
+      </li>
+
+      <li>
+        <a href="women.html" class="block hover:text-pink-600 transition">
+          Women
+        </a>
+      </li>
+
+      <li>
+        <a href="children.html" class="block hover:text-pink-600 transition">
+          Children
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
   <!-- Hero Slider -->
   <section class="pt-24">
     <div class="max-w-7xl mx-auto px-6">
