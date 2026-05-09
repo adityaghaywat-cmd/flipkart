@@ -1,0 +1,315 @@
+
+# Shopping Website Using Tailwind CSS
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Responsive Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold text-pink-600">
+      FashionHub
+    </h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+      <li>
+        <a href="men.html" class="hover:text-pink-600 transition">
+          Men
+        </a>
+      </li>
+
+      <li>
+        <a href="women.html" class="hover:text-pink-600 transition">
+          Women
+        </a>
+      </li>
+
+      <li>
+        <a href="children.html" class="hover:text-pink-600 transition">
+          Children
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-3xl text-pink-600">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+
+    <ul class="flex flex-col text-center text-gray-700 font-semibold py-4 space-y-4">
+
+      <li>
+        <a href="men.html" class="block hover:text-pink-600 transition">
+          Men
+        </a>
+      </li>
+
+      <li>
+        <a href="women.html" class="block hover:text-pink-600 transition">
+          Women
+        </a>
+      </li>
+
+      <li>
+        <a href="children.html" class="block hover:text-pink-600 transition">
+          Children
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+  <!-- Hero Slider -->
+  <section class="pt-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="relative overflow-hidden rounded-3xl shadow-lg">
+
+        <div class="flex animate-pulse">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop"
+               alt="Fashion Banner"
+               class="w-full h-[450px] object-cover">
+        </div>
+
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div class="text-center text-white px-4">
+            <h2 class="text-5xl font-bold mb-4">Latest Fashion Collection</h2>
+            <p class="text-lg mb-6">Shop trendy clothes for Men, Women & Children</p>
+            <button class="bg-pink-600 hover:bg-pink-700 px-8 py-3 rounded-full text-lg font-semibold transition">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Men Section -->
+  <section id="men" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Men Collection</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE4HpRv_RhFlLP3OnRkaeRDlo_ZiolVtFHZg&s" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Men Jacket</h3>
+            <p class="text-gray-500 mt-2">Stylish winter jacket for men.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹1999</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Casual Shirt</h3>
+            <p class="text-gray-500 mt-2">Comfortable cotton casual shirt.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹899</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">T-Shirt</h3>
+            <p class="text-gray-500 mt-2">Premium quality men t-shirt.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹599</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Sports Shoes</h3>
+            <p class="text-gray-500 mt-2">Comfortable running shoes.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹2499</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Women Section -->
+  <section id="women" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Women Collection</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Women Dress</h3>
+            <p class="text-gray-500 mt-2">Elegant fashion dress.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹1799</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Handbag</h3>
+            <p class="text-gray-500 mt-2">Luxury handbag collection.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹2999</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Women Shoes</h3>
+            <p class="text-gray-500 mt-2">Modern stylish shoes.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹1599</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Fashion Top</h3>
+            <p class="text-gray-500 mt-2">Trendy women top wear.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹799</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Children Section -->
+  <section id="children" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Children Collection</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Kids T-Shirt</h3>
+            <p class="text-gray-500 mt-2">Soft cotton t-shirt for kids.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹499</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Kids Shoes</h3>
+            <p class="text-gray-500 mt-2">Colorful comfortable shoes.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹999</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Kids Jacket</h3>
+            <p class="text-gray-500 mt-2">Warm and stylish jacket.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹1299</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=600&auto=format&fit=crop" class="w-full h-72 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Kids Fashion Set</h3>
+            <p class="text-gray-500 mt-2">Cute fashion set for children.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-pink-600 font-bold text-lg">₹1499</span>
+              <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Buy</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">FashionHub</h2>
+      <p class="text-gray-400 mb-4">
+        Your one-stop online shopping website for trendy fashion collections.
+      </p>
+      <p class="text-gray-500">© 2026 FashionHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+```
+
+## Features  add slider electornic
+
+* Responsive Navbar
+* Men, Women, Children Categories
+* Hero Slider Section
+* Random Product Cards
+* Tailwind CSS Design
+create the same page electronic.html add by electronic prodock
